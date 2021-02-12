@@ -1,18 +1,26 @@
 import React from "react";
-// import { useEffect } from "react";
 import api from "../services/api";
+import { useState, useEffect } from "react";
+import Flags from "./Flags";
 import "../styles/App.css";
 
-api.getDataFromApi();
-
 const App = (props) => {
-  // // api
-  // useEffect(() => {
-  //   api.getDataFromApi().then((data) => {
-  //     console.log(data);
-  //   });
-  // }, []);
+  // state
+  const [countries, setCountries] = useState([]);
 
-  return <div className="App">Hola mundo</div>;
+  // api
+  useEffect(() => {
+    api.getDataFromApi().then((data) => {
+      console.log(data);
+      setCountries(data);
+    });
+  }, []);
+
+  return (
+    <div>
+      <Flags countries={countries} />
+    </div>
+  );
 };
+
 export default App;

@@ -1,8 +1,8 @@
 const getDataFromApi = () => {
-  fetch("http://dev.naveler.com:8007/api/get_countries/")
+  return fetch("http://dev.naveler.com:8007/api/get_countries/")
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
+      return data.message;
     });
 };
 export default {
