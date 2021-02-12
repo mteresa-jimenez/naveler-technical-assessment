@@ -4,7 +4,6 @@ export const getCountriesFromApi = () => {
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       return data.message;
     });
 };
@@ -31,6 +30,6 @@ export const getUsersFromApi = (username, password) => {
   })
     .then((results) => results.json())
     .then((data) => {
-      console.log(data);
+      return data.message.user_data;
     });
 };

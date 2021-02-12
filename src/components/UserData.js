@@ -1,8 +1,12 @@
-const Flags = (props) => {
-  const Flag = props.countries.map((country, index) => {
+import "../styles/UserData.scss";
+
+const UserData = (props) => {
+  console.log(props.userData.country);
+  const flag = props.countries.map((country, index) => {
     return (
       <li key={index}>
         <img
+          className="all-flags"
           src={"http://dev.naveler.com:8007/static/" + country.country_flag}
           alt={"flag of " + country.name_en}
         />
@@ -12,9 +16,9 @@ const Flags = (props) => {
 
   return (
     <div>
-      <ul>{Flag}</ul>
+      <ul>{flag}</ul>
     </div>
   );
 };
 
-export default Flags;
+export default UserData;

@@ -1,17 +1,21 @@
 import React from "react";
 import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
-import Flags from "./Flags";
-// import UserInfo from "./UserInfo";
-import "../styles/App.css";
+import Flags from "./LatinoFlags";
+import UserData from "./UserData";
+import "../styles/App.scss";
 
 const App = (props) => {
   // state
   const [countries, setCountries] = useState([]);
+  const [userData, setUserData] = useState({});
 
   // api
   useEffect(() => {
-    getUsersFromApi("demo_front", "front_front12345");
+    getUsersFromApi("demo_front", "front_front12345").then((data) => {
+      console.log(data);
+      setUserData(data);
+    });
 
     getCountriesFromApi().then((data) => {
       console.log(data);
@@ -22,7 +26,7 @@ const App = (props) => {
   return (
     <div>
       <Flags countries={countries} />
-      {/* <UserInfo /> */}
+      <UserData countries={countries} userData={userData} />
     </div>
   );
 };
