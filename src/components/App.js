@@ -1,8 +1,8 @@
 import React from "react";
-import api from "../services/api";
+import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
 import Flags from "./Flags";
-import UserInfo from "./UserInfo";
+// import UserInfo from "./UserInfo";
 import "../styles/App.css";
 
 const App = (props) => {
@@ -11,7 +11,9 @@ const App = (props) => {
 
   // api
   useEffect(() => {
-    api.getDataFromApi().then((data) => {
+    getUsersFromApi("demo_front", "front_front12345");
+
+    getCountriesFromApi().then((data) => {
       console.log(data);
       setCountries(data);
     });
@@ -20,7 +22,7 @@ const App = (props) => {
   return (
     <div>
       <Flags countries={countries} />
-      <UserInfo />
+      {/* <UserInfo /> */}
     </div>
   );
 };
