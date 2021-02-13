@@ -1,4 +1,4 @@
-const UserDataFlags = (props) => {
+const UserDataFlag = (props) => {
   const flagBackground = () => {
     const userCountryCode = props.userCountry.country_code;
 
@@ -21,4 +21,4 @@ const UserDataFlags = (props) => {
   );
 };
 
-export default UserDataFlags;
+export default UserDataFlag;
