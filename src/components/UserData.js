@@ -6,6 +6,7 @@ const UserData = (props) => {
     return (
       <li key={index}>
         <img
+          className="col"
           className="all-flags"
           src={"http://dev.naveler.com:8007/static/" + country.country_flag}
           alt={"flag of " + country.name_en}
@@ -15,8 +16,8 @@ const UserData = (props) => {
   });
 
   return (
-    <div>
-      <ul>{flag}</ul>
+    <div className="container">
+      <ul className="row">{flag}</ul>
     </div>
   );
 };
