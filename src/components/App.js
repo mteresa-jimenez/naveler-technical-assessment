@@ -3,6 +3,7 @@ import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
 import Flags from "./LatinoFlags";
 import UserData from "./UserData";
+import Graph from "./Graph";
 import "../styles/App.scss";
 
 const App = (props) => {
@@ -37,6 +38,7 @@ const App = (props) => {
         // userData={userData}
         userCountry={userCountry}
       />
+      <Graph countries={countries} />
     </div>
   );
 };
