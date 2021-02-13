@@ -8,13 +8,19 @@ import "../styles/App.scss";
 const App = (props) => {
   // state
   const [countries, setCountries] = useState([]);
-  const [userData, setUserData] = useState({});
+  // const [userData, setUserData] = useState({});
+  const [userCountry, setUserCountry] = useState({});
 
   // api
   useEffect(() => {
+    // getUsersFromApi("demo_front", "front_front12345").then((data) => {
+    //   console.log(data);
+    //   setUserData(data);
+    // });
+
     getUsersFromApi("demo_front", "front_front12345").then((data) => {
-      console.log(data);
-      setUserData(data);
+      console.log(data.country);
+      setUserCountry(data.country);
     });
 
     getCountriesFromApi().then((data) => {
@@ -26,7 +32,11 @@ const App = (props) => {
   return (
     <div>
       <Flags countries={countries} />
-      <UserData countries={countries} userData={userData} />
+      <UserData
+        countries={countries}
+        // userData={userData}
+        userCountry={userCountry}
+      />
     </div>
   );
 };
