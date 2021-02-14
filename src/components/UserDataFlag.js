@@ -4,7 +4,7 @@ const UserDataFlag = (props) => {
     if (userCountryCode === props.country.country_code) {
       return "user-flag";
     } else {
-      return "all-flags";
+      return "no-user-flags";
     }
   };
 
@@ -12,7 +12,7 @@ const UserDataFlag = (props) => {
     <>
       <img
         className="col"
-        className={flagBackground()}
+        className={"all-flags " + flagBackground()}
         src={"http://dev.naveler.com:8007/static/" + props.country.country_flag}
         alt={"flag of " + props.country.name_en}
       />

@@ -6,23 +6,24 @@ const LatinoFlags = (props) => {
     .filter((country) => country.is_latino)
     .map((country, index) => {
       return (
-        <li key={index} className="col flag">
+        <li key={index} className="col">
           <img
             src={"http://dev.naveler.com:8007/static/" + country.country_flag}
             alt={"flag of " + country.name_en}
             title={"flag of " + country.name_en}
+            className="latino-flag"
           />
         </li>
       );
     });
 
   return (
-    <div className="latino-flags">
+    <>
       <Header title="Latino country flags" />
-      <div className="container latino-flags__container">
+      <div className="container">
         <ul className="row">{latinoFlag}</ul>
       </div>
-    </div>
+    </>
   );
 };
 

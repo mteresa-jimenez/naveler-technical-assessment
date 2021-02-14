@@ -1,20 +1,9 @@
-.latino-flags {
-  width: 100%;
-  height: 100vh;
-  background-color: khaki;
-  color: white;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .row {
   margin: auto;
 }
 
-.flag {
-  border: solid red 1px;
-  // margin: 5px;
+.latino-flag {
+  width: 75px;
+  margin: 10px;
   text-align: center;
 }

@@ -3,7 +3,6 @@ import { Bar } from "react-chartjs-2";
 import Header from "./Header";
 // import Highcharts from "highcharts";
 // import HighchartsReact from "highcharts-react-official";
-import "../styles/Graph.scss";
 
 const Graph = (props) => {
   console.log("countries in graph", props.countries);
@@ -20,9 +19,10 @@ const Graph = (props) => {
     datasets: [
       {
         label: "Phone prefix",
-        backgroundColor: "rgb(0, 129, 255)",
-        boderColor: "white",
-        boderWidth: 1,
+        backgroundColor: "rgb(152, 0, 255)",
+        borderColor: "rgba(181, 143, 255, 1)",
+        hoverBackgroundColor: "rgba(154, 0, 194, 0.8)",
+        borderWidth: 2,
         data: phonePrefix,
       },
     ],
@@ -36,7 +36,7 @@ const Graph = (props) => {
   return (
     <div>
       <Header title="Graph" />
-      <Bar data={data} options={options} className="graph" />
+      <Bar data={data} options={options} />
       {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
     </div>
   );
