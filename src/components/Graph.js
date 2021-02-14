@@ -1,28 +1,22 @@
 // import { render } from "react-dom";
 import { Bar } from "react-chartjs-2";
+import Header from "./Header";
 // import Highcharts from "highcharts";
 // import HighchartsReact from "highcharts-react-official";
 import "../styles/Graph.scss";
 
 const Graph = (props) => {
   console.log("countries in graph", props.countries);
-  const flags = props.countries.map((country) => {
-    return (
-      <img
-        src={"http://dev.naveler.com:8007/static/" + country.country_flag}
-        alt=""
-      />
-    );
+  const names = props.countries.map((country) => {
+    return country.name;
   });
-
-  console.log("flags", flags);
 
   const phonePrefix = props.countries.map((country) => {
     return parseInt(country.phone_prefix);
   });
 
   const data = {
-    labels: flags,
+    labels: names,
     datasets: [
       {
         label: "Phone prefix",
@@ -40,9 +34,9 @@ const Graph = (props) => {
   };
 
   return (
-    <div className="graph">
-      <h1>chart</h1>
-      <Bar data={data} options={options} />
+    <div>
+      <Header title="Graph" />
+      <Bar data={data} options={options} className="graph" />
       {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
     </div>
   );

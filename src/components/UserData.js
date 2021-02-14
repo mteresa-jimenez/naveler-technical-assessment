@@ -1,3 +1,4 @@
+import Header from "./Header";
 import UserDataFlag from "./UserDataFlag";
 import "../styles/UserData.scss";
 
@@ -11,9 +12,12 @@ const UserData = (props) => {
   });
 
   return (
-    <div className="container">
-      <ul className="row">{flag}</ul>
-    </div>
+    <>
+      <Header title="User country info" />
+      <div className="container">
+        <ul className="row">{flag}</ul>
+      </div>
+    </>
   );
 };
 

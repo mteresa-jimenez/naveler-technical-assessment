@@ -1,18 +1,22 @@
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
+import "../styles/Landing.scss";
 
 const Landing = () => {
   return (
     <>
+      <img src={logo} alt="Naveler logo" title="Naveler logo" />
       <div>
-        <h1>NAVELER</h1>
         <Link to="/latino-flags" title="Go to flags from latino countries">
-          1. Flags from latino countries
+          <button> 1. Go to flags from latino countries </button>
         </Link>
+
         <Link to="/user-country-data" title="Go to user's country data">
-          2. Go to user's country data
+          <button> 2. Go to user's country data </button>
         </Link>
+
         <Link to="/graph" title="Go to graph">
-          3. Go to graph
+          <button> 3. Go to graph </button>
         </Link>
       </div>
     </>
