@@ -1,10 +1,12 @@
 import React from "react";
 import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
+import Landing from "./Landing";
 import Flags from "./LatinoFlags";
 import UserData from "./UserData";
 import Graph from "./Graph";
 import "../styles/App.scss";
+import { Switch, Route } from "react-router-dom";
 
 const App = (props) => {
   // state
@@ -31,15 +33,27 @@ const App = (props) => {
   }, []);
 
   return (
-    <div>
-      <Flags countries={countries} />
-      <UserData
-        countries={countries}
-        // userData={userData}
-        userCountry={userCountry}
-      />
-      <Graph countries={countries} />
-    </div>
+    <>
+      <Switch>
+        <Route exact path="/">
+          <Landing />
+        </Route>
+
+        <Route exact path="/latino-flags">
+          <Flags countries={countries} />
+        </Route>
+        <Route exact path="/user-country-data">
+          <UserData
+            countries={countries}
+            // userData={userData}
+            userCountry={userCountry}
+          />
+        </Route>
+        <Route exact path="/graph">
+          <Graph countries={countries} />
+        </Route>
+      </Switch>
+    </>
   );
 };
 
