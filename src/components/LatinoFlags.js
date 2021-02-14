@@ -9,6 +9,7 @@ const LatinoFlags = (props) => {
           <img
             src={"http://dev.naveler.com:8007/static/" + country.country_flag}
             alt={"flag of " + country.name_en}
+            title={"flag of " + country.name_en}
           />
         </li>
       );

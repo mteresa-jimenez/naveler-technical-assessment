@@ -8,26 +8,18 @@ import Graph from "./Graph";
 import "../styles/App.scss";
 import { Switch, Route } from "react-router-dom";
 
-const App = (props) => {
+const App = () => {
   // state
   const [countries, setCountries] = useState([]);
-  // const [userData, setUserData] = useState({});
   const [userCountry, setUserCountry] = useState({});
 
   // api
   useEffect(() => {
-    // getUsersFromApi("demo_front", "front_front12345").then((data) => {
-    //   console.log(data);
-    //   setUserData(data);
-    // });
-
     getUsersFromApi("demo_front", "front_front12345").then((data) => {
-      console.log(data.country);
       setUserCountry(data.country);
     });
 
     getCountriesFromApi().then((data) => {
-      console.log(data);
       setCountries(data);
     });
   }, []);
@@ -43,11 +35,7 @@ const App = (props) => {
           <Flags countries={countries} />
         </Route>
         <Route exact path="/user-country-data">
-          <UserData
-            countries={countries}
-            // userData={userData}
-            userCountry={userCountry}
-          />
+          <UserData countries={countries} userCountry={userCountry} />
         </Route>
         <Route exact path="/graph">
           <Graph countries={countries} />

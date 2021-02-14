@@ -1,7 +1,6 @@
 const UserDataFlag = (props) => {
   const flagBackground = () => {
     const userCountryCode = props.userCountry.country_code;
-
     if (userCountryCode === props.country.country_code) {
       return "user-flag";
     } else {
