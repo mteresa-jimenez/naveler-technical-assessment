@@ -1,4 +1,5 @@
 import React from "react";
+import { Switch, Route } from "react-router-dom";
 import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
 import Landing from "./Landing";
@@ -6,7 +7,7 @@ import Flags from "./LatinoFlags";
 import UserData from "./UserData";
 import Graph from "./Graph";
 import "../styles/App.scss";
-import { Switch, Route } from "react-router-dom";
+import "../styles/Footer.scss";
 
 const App = () => {
   // state

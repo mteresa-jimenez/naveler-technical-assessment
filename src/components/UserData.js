@@ -1,5 +1,6 @@
 import Header from "./Header";
 import UserDataFlag from "./UserDataFlag";
+import Footer from "./Footer";
 import "../styles/UserData.scss";
 
 const UserData = (props) => {
@@ -17,6 +18,7 @@ const UserData = (props) => {
       <div className="container">
         <ul className="row">{flag}</ul>
       </div>
+      <Footer />
     </>
   );
 };

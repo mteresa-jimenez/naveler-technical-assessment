@@ -1,6 +1,7 @@
 // import { render } from "react-dom";
 import { Bar } from "react-chartjs-2";
 import Header from "./Header";
+import Footer from "./Footer";
 // import Highcharts from "highcharts";
 // import HighchartsReact from "highcharts-react-official";
 
@@ -34,11 +35,12 @@ const Graph = (props) => {
   };
 
   return (
-    <div>
+    <>
       <Header title="Graph" />
       <Bar data={data} options={options} />
       {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
-    </div>
+      <Footer />
+    </>
   );
 };
 

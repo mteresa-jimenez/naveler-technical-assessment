@@ -1,0 +1,19 @@
+.footer {
+  width: 100%;
+  height: 50px;
+  font-family: "Roboto Slab", serif;
+  font-weight: 300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--link {
+    color: rgb(201, 108, 224);
+    font-weight: 500;
+  }
+
+  &--detail {
+    margin-left: 20px;
+    font-weight: 100;
+  }
+}

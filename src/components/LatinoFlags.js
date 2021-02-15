@@ -1,4 +1,5 @@
 import Header from "./Header";
+import Footer from "./Footer";
 import "../styles/LatinoFlags.scss";
 
 const LatinoFlags = (props) => {
@@ -23,6 +24,7 @@ const LatinoFlags = (props) => {
       <div className="container latino-flag--container">
         <ul className="row">{latinoFlag}</ul>
       </div>
+      <Footer />
     </>
   );
 };

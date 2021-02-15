@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import Footer from "./Footer";
 import "../styles/Landing.scss";
 
 const Landing = () => {
@@ -24,6 +25,7 @@ const Landing = () => {
           <button> 3. Go to graph </button>
         </Link>
       </div>
+      <Footer />
     </div>
   );
 };
