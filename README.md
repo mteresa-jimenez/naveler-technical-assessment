@@ -10,7 +10,7 @@ If you want to see the demo of this project deployed, you can visit the [Demo pa
 
 ## **DEVELOPMENT**
 
-Fot the developin of this project, this is the given API: http://dev.naveler.com:8007/api
+Fot the development of this project, this is the given API: http://dev.naveler.com:8007/api
 
 When fetching the results of this API, a CORS error may appear. In order to avoid this problem in the production process and being able to use the data in the API, I have installed the Chrome extension "Allow CORS: Access-Control-Allow-Origin".
 
