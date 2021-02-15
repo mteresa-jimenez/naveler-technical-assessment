@@ -2,8 +2,6 @@
 
 ---
 
-### **Teresa Jiménez**
-
 This is an assessment for the selection process for Naveler. This project has been developed with **React, JavaScript, HTML5 and SASS**.
 
 ## DEMO
@@ -31,6 +29,7 @@ For this part of the exercide, I have called the endpoint login/ from the API th
 Before that, I tried two other different ways to login. However, in this case, the only successful way is the one used.
 
 - By adding this to the fetch:
+```
   headers: {
   "Content-type": "application/json",
   },
@@ -38,11 +37,15 @@ Before that, I tried two other different ways to login. However, in this case, t
   username: "demo_front",
   password: "front_front12345",
   })
+```
 
 - Or adding this to the fetch:
+```
   headers: {
   Authorization: "Basic " + btoa(username + ":" + password),
   }
+ ```
+
 
 In order to avoid errors when using the data in the UserData component due to asynchronism, I have previously selected the needed data in the "userCountry" attribute in the App component. When it is done in a lower component, such us UserData, the result is "undefined".
 
@@ -113,4 +116,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ---
 
-⌨️ by Teresa Jiménez
+⌨️  **by Teresa Jiménez**
