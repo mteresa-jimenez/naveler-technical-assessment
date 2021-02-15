@@ -1,16 +1,20 @@
 # Naveler Technical Assessment
 
+<<<<<<< HEAD
 ### **Teresa Jiménez**
+=======
+---
+>>>>>>> 0381375c27b4de37dba87b6aefbded2ffc1d85dd
 
 This is an assessment for the selection process for Naveler. This project has been developed with **React, JavaScript, HTML5 and SASS**.
 
 ## DEMO
 
-If you want to see the demo of this project deployed, you can visit the [Demo page](https://mteresa-jimenez.github.io/naveler-technical-assessment/#/ "Take a look")
+If you want to see the demo of this project deployed, you can visit the [Demo page](https://mteresa-jimenez.github.io/naveler-technical-assessment/#/ "Take a look").
 
 ## **DEVELOPMENT**
 
-Fot the developin of this project, this is the given API: http://dev.naveler.com:8007/api
+For the development of this project, this is the API needed:  http://dev.naveler.com:8007/api
 
 When fetching the results of this API, a CORS error may appear. In order to avoid this problem in the production process and being able to use the data in the API, I have installed the Chrome extension "Allow CORS: Access-Control-Allow-Origin".
 
@@ -18,17 +22,18 @@ In the landing page, we can find three buttons which takes us to the three diffe
 
 > 1. **Latino country flags list**
 
-To create the LatinoFlags compoments, first I have called the endpoint get_countries/ and fetched its result. Then, I have brought the data from the App component through "props" and filtered the needed data to render a list of the flags which have the "is_latino" boolean set to true.
+To create the LatinoFlags compoments, first I have called the endpoint get_countries/ and fetched its result throught a GET method. Then, I have brought the data from the App component through "props" and filtered the needed data to render a list of the flags which have the "is_latino" boolean set to true.
 
 For a responsive design, I have used Bootstrap Grid System.
 
 > 2. **Login and display users data**
 
-For this part of the exercide, I have called the endpoint login/ from the API. It is necessary to login a username and a password to fetch the results from this endpoint. In order to do it, I have implemented the "FormData()" object, which simulates a form and allowed me to append two values ("username" and "password").
+For this part of the exercide, I have called the endpoint login/ from the API through a POST method. It is necessary to login a username and a password to fetch the results from this endpoint. In order to do it, I have implemented the "FormData()" object, which simulates a form and allowed me to append two values ("username" and "password").
 
 Before that, I tried two other different ways to login. However, in this case, the only successful way is the one used.
 
 - By adding this to the fetch:
+```
   headers: {
   "Content-type": "application/json",
   },
@@ -36,11 +41,15 @@ Before that, I tried two other different ways to login. However, in this case, t
   username: "demo_front",
   password: "front_front12345",
   })
+```
 
 - Or adding this to the fetch:
+```
   headers: {
   Authorization: "Basic " + btoa(username + ":" + password),
   }
+ ```
+
 
 In order to avoid errors when using the data in the UserData component due to asynchronism, I have previously selected the needed data in the "userCountry" attribute in the App component. When it is done in a lower component, such us UserData, the result is "undefined".
 
@@ -111,4 +120,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ---
 
-⌨️ by Teresa Jiménez
+⌨️  **by Teresa Jiménez**
