@@ -1,8 +1,15 @@
 .all-flags {
-  width: 90px;
+  width: 65px;
   border-radius: 3px;
-  padding: 0 10px;
-  margin: 20px;
+  padding: 0 5px;
+  margin: 10px;
+
+  @media all and (min-width: 550px) {
+    width: 90px;
+    border-radius: 3px;
+    padding: 0 10px;
+    margin: 20px;
+  }
 }
 
 .no-user-flags {

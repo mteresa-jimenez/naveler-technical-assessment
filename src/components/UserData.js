@@ -13,7 +13,7 @@ const UserData = (props) => {
 
   return (
     <>
-      <Header title="User country info" />
+      <Header title="User country" />
       <div className="container">
         <ul className="row">{flag}</ul>
       </div>

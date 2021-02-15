@@ -4,9 +4,14 @@ import "../styles/Landing.scss";
 
 const Landing = () => {
   return (
-    <>
-      <img src={logo} alt="Naveler logo" title="Naveler logo" />
-      <div>
+    <div className="landing">
+      <img
+        src={logo}
+        alt="Naveler logo"
+        title="Naveler logo"
+        className="landing-logo"
+      />
+      <div className="landing-buttons">
         <Link to="/latino-flags" title="Go to flags from latino countries">
           <button> 1. Go to flags from latino countries </button>
         </Link>
@@ -19,7 +24,7 @@ const Landing = () => {
           <button> 3. Go to graph </button>
         </Link>
       </div>
-    </>
+    </div>
   );
 };
 

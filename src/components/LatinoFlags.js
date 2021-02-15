@@ -10,7 +10,7 @@ const LatinoFlags = (props) => {
           <img
             src={"http://dev.naveler.com:8007/static/" + country.country_flag}
             alt={"flag of " + country.name_en}
-            title={"flag of " + country.name_en}
+            title={"Flag of " + country.name_en}
             className="latino-flag"
           />
         </li>
@@ -19,8 +19,8 @@ const LatinoFlags = (props) => {
 
   return (
     <>
-      <Header title="Latino country flags" />
-      <div className="container">
+      <Header title="Latino flags" />
+      <div className="container latino-flag--container">
         <ul className="row">{latinoFlag}</ul>
       </div>
     </>

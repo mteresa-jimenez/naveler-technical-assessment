@@ -1,9 +1,19 @@
 .row {
   margin: auto;
 }
+.latino-flag--container {
+  @media all and (min-width: 768px) {
+    margin-top: 20px;
+  }
+}
 
 .latino-flag {
-  width: 75px;
-  margin: 10px;
-  text-align: center;
+  width: 60px;
+  margin: 6px;
+
+  @media all and (min-width: 550px) {
+    width: 75px;
+    margin: 10px;
+    text-align: center;
+  }
 }

@@ -15,6 +15,7 @@ const UserDataFlag = (props) => {
         className={"all-flags " + flagBackground()}
         src={"http://dev.naveler.com:8007/static/" + props.country.country_flag}
         alt={"flag of " + props.country.name_en}
+        title={"Flag of " + props.country.name_en}
       />
     </>
   );
