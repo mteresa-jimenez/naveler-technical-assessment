@@ -16,17 +16,6 @@ export const getUsersFromApi = (username, password) => {
   return fetch("http://dev.naveler.com:8007/api/login/", {
     method: "POST",
     body: formData,
-    // headers: {
-    //   Authorization: "Basic " + btoa(username + ":" + password),
-    // },
-
-    // headers: {
-    //   "Content-type": "application/json",
-    // },
-    // body: JSON.stringify({
-    //   username: "demo_front",
-    //   password: "front_front12345",
-    // }),
   })
     .then((results) => results.json())
     .then((data) => {
