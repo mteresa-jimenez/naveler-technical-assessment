@@ -1,6 +1,6 @@
 # Naveler Technical Assessment
 
-### **_Teresa Jiménez_**
+### **Teresa Jiménez**
 
 This is an assessment for the selection process for Naveler. This project has been developed with **React, JavaScript, HTML5 and SASS**.
 
