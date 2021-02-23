@@ -2,6 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { getCountriesFromApi, getUsersFromApi } from "../services/api";
 import { useState, useEffect } from "react";
+import { username, password } from "../services/petitions";
 import Landing from "./Landing";
 import Flags from "./LatinoFlags";
 import UserData from "./UserData";
@@ -16,7 +17,7 @@ const App = () => {
 
   // api
   useEffect(() => {
-    getUsersFromApi("demo_front", "front_front12345").then((data) => {
+    getUsersFromApi(username, password).then((data) => {
       setUserCountry(data.country);
     });
 

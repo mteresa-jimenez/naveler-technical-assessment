@@ -1,4 +1,5 @@
 import axios from "axios";
+import { endpointCountries, endpointLogin } from "./petitions";
 
 const instance = axios.create({
   baseURL: "http://dev.naveler.com:8007/api/",
@@ -6,7 +7,7 @@ const instance = axios.create({
 
 export const getCountriesFromApi = () => {
   return instance
-    .get("get_countries/")
+    .get(endpointCountries)
     .then((response) => response)
     .then((data) => {
       return data.data.message;
@@ -19,10 +20,9 @@ export const getUsersFromApi = (username, password) => {
   formData.append("password", password);
 
   return instance
-    .post("login/", formData)
+    .post(endpointLogin, formData)
     .then((response) => response)
     .then((data) => {
       return data.data.message.user_data;
     });
 };
-
