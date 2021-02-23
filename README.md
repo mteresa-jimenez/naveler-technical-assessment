@@ -1,10 +1,8 @@
 # Naveler Technical Assessment
 
-<<<<<<< HEAD
+
 ### **Teresa Jiménez**
-=======
----
->>>>>>> 0381375c27b4de37dba87b6aefbded2ffc1d85dd
+
 
 This is an assessment for the selection process for Naveler. This project has been developed with **React, JavaScript, HTML5 and SASS**.
 
@@ -38,8 +36,8 @@ Before that, I tried two other different ways to login. However, in this case, t
   "Content-type": "application/json",
   },
   body: JSON.stringify({
-  username: "demo_front",
-  password: "front_front12345",
+  username: username,
+  password: password,
   })
 ```
 
