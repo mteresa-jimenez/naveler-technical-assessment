@@ -1,11 +1,7 @@
-// import { render } from "react-dom";
 import { Bar } from "react-chartjs-2";
 import Header from "./Header";
-// import Highcharts from "highcharts";
-// import HighchartsReact from "highcharts-react-official";
 
 const Graph = (props) => {
-  console.log("countries in graph", props.countries);
   const names = props.countries.map((country) => {
     return country.name;
   });
@@ -37,11 +33,8 @@ const Graph = (props) => {
     <>
       <Header title="Graph" />
       <Bar data={data} options={options} />
-      {/* <HighchartsReact highcharts={Highcharts} options={options} /> */}
     </>
   );
 };
-
-// render(<Graph />, document.getElementById("root"));
 
 export default Graph;
