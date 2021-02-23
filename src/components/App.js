@@ -17,6 +17,7 @@ const App = () => {
   // api
   useEffect(() => {
     getUsersFromApi("demo_front", "front_front12345").then((data) => {
+      console.log("user data in Api", data);
       setUserCountry(data.country);
     });
 
