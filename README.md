@@ -1,8 +1,6 @@
 # Naveler Technical Assessment
 
-
 ### **Teresa Jiménez**
-
 
 This is an assessment for the selection process for Naveler. This project has been developed with **React, JavaScript, HTML5 and SASS**.
 
@@ -12,7 +10,7 @@ If you want to see the demo of this project deployed, you can visit the [Demo pa
 
 ## **DEVELOPMENT**
 
-For the development of this project, this is the API needed:  http://dev.naveler.com:8007/api
+For the development of this project, this is the API needed: http://dev.naveler.com:8007/api
 
 When fetching the results of this API, a CORS error may appear. In order to avoid this problem in the production process and being able to use the data in the API, I have installed the Chrome extension "Allow CORS: Access-Control-Allow-Origin".
 
@@ -31,6 +29,7 @@ For this part of the exercide, I have called the endpoint login/ from the API th
 Before that, I tried two other different ways to login. However, in this case, the only successful way is the one used.
 
 - By adding this to the fetch:
+
 ```
   headers: {
   "Content-type": "application/json",
@@ -42,12 +41,12 @@ Before that, I tried two other different ways to login. However, in this case, t
 ```
 
 - Or adding this to the fetch:
+
 ```
   headers: {
   Authorization: "Basic " + btoa(username + ":" + password),
   }
- ```
-
+```
 
 In order to avoid errors when using the data in the UserData component due to asynchronism, I have previously selected the needed data in the "userCountry" attribute in the App component. When it is done in a lower component, such us UserData, the result is "undefined".
 
@@ -118,4 +117,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ---
 
-⌨️  **by Teresa Jiménez**
+⌨️ **by Teresa Jiménez**
